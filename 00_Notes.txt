@@ -1,0 +1,12 @@
+Interpreter vs Compiled language:
+    Interpreter: at runtime convert the commands to machine format and run them (python)
+    Compiled: compile the code to machine format and produce the executable, run the executable (go, c, c++)
+    Compiled with vm: compile the code in a format that understand the vm (java - jvm , c# CLR)
+
+To compile go script: go build
+
+Memory managment:
+
+    Manual: c,rust
+    Garbage collector: java
+    Runtime: golang extra comlied code that handle the memory managment
