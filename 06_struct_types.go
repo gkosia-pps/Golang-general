@@ -8,7 +8,22 @@ type Student struct {
 	age  int
 }
 
-func main() {
+type car struct {
+	model  string
+	number string
+}
+
+type truck struct {
+	car
+	size int
+}
+
+// functions on structs
+func (t truck) print_plates() {
+	fmt.Println(t.number)
+}
+
+func main_06() {
 	// initiate a struct instance, all elements will be initialized to deafult
 	gab := Student{}
 	gab.name = "gab"
@@ -25,4 +40,9 @@ func main() {
 
 	fmt.Println(car.model)
 
+	// embedded structs: the struct that embed the other struct inherits its fields
+	my_truck := truck{}
+	my_truck.model = "suzuki"
+	my_truck.number = "abc123"
+	my_truck.print_plates()
 }
