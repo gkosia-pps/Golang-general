@@ -10,3 +10,34 @@ Memory managment:
     Manual: c,rust
     Garbage collector: java
     Runtime: golang extra comlied code that handle the memory managment
+
+
+Packages: main packages include a main function that is the entry point
+          library packages does not include a main function, they provide functions that can be imported and used in other scripts
+
+          All files under the same directory lives in the same package
+          We have to import code only if it lives in different package
+
+Module: a release of a collection of packages
+        go.mod: declares that the project is a module
+                contains the module path
+                the version of go  required for project
+                other dependencies required for project (required (github urls))
+        go.sum: when importing a package go.sum contains the dependencies of the packages we have installed
+
+        To import packages and modules use github remote url
+
+
+go run: run the go code
+go build: build a production executable: build the package of the current directory
+go build && ./myprogram: rebuild and run the executable
+go install: compile and install the program locally
+go get <githuburl>: download and install third-party dependencies
+
+Build libraries: export functions that can be used
+                 pakcage name is not main
+                 function names start with Capital letter (way to export the fuunction for external use)
+
+
+Concurrent vs sequential:
+    Split independed block of code to multiple cores of cpu

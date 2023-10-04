@@ -10,7 +10,7 @@ func variadic_fun(nums ...int) {
 
 }
 
-func main() {
+func main_09() {
 
 	my_array := [10]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 0}
 	for i := 0; i < len(my_array); i++ {
@@ -32,6 +32,24 @@ func main() {
 	fmt.Println(len(my_scl), cap(my_scl))
 
 	// call variadic function
-	// https://www.youtube.com/watch?v=un6ZyFkqFKo
+	// using variadic definition we can pass array, slicer or comma separated list
 	variadic_fun(1, 1, 2, 3)
+
+	// spread operator
+	// used to spread the values of a slicer as input to a periodic function
+	variadic_fun(scl...)
+
+	// append values at the end of slicer
+	scl = append(scl, 6, 7)
+	fmt.Println(scl)
+
+	// two dimension slice: slice of slices
+	matrix := make([][]int, 0)
+	matrix = append(matrix, []int{})
+	fmt.Println(matrix)
+
+	// loop over slicer
+	for i, e := range scl {
+		fmt.Println(i, e)
+	}
 }

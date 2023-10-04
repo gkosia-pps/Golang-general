@@ -12,8 +12,9 @@ func main_02() {
 	var age int = 33
 	var salary float32 = 10.2
 	var likeFootball bool = true
+	var startOfName rune = 'g'
 
-	fmt.Printf("%q %v %f %v", name, age, salary, likeFootball)
+	fmt.Printf("%q %v %f %v %v", name, age, salary, likeFootball, startOfName)
 
 	// let compiler to decide the data type, short assignment operator
 	fav_number := 4
