@@ -1,0 +1,16 @@
+go run main.go: run a file (compile + execute)
+go build: build the binary of the app in current folder
+go install: build the binary and add it to path variable to make it global available
+
+Initialize a module:
+
+    go mod modulename: create a mod.go file that contains module name, version and all dependencies
+
+Cobra golang: open source library to create CLI tools
+              
+              Structure:
+
+                the main.go call all the files in cmd folder
+                cmd/root: initialize the cobra root command
+                cmd: all files under this folder except root are the subcommands of the cli
+                     cobra add subcommand_file_name it will create a new file under cmd and initialize it with startup code
