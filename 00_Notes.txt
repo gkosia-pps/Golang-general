@@ -41,3 +41,9 @@ Build libraries: export functions that can be used
 
 Concurrent vs sequential:
     Split independed block of code to multiple cores of cpu
+
+
+
+Creating a new project:
+
+    1. go mod init <appname>: it will create the go.mod file

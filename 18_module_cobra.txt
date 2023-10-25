@@ -1,0 +1,13 @@
+https://www.youtube.com/watch?v=Ll-s38JKWi8
+
+
+Create the app:
+    1. go mod init golang-produ-consu: create the mod file
+    2. go get -u github.com/spf13/cobra: download cobra module
+    3. go install github.com/spf13/cobra-cli@latest: install the cobra cli app
+    4. cobra-cli init: create the main file, cmd folder and root.go
+    5. go install: build, install the app on host
+    6. cobra-cli add produce: create a sub command
+
+The main file call all commands in cmd folder
+

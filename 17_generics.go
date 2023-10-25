@@ -9,7 +9,7 @@ func genericfunc[T any](s []T) ([]T, []T) {
 
 	return s[:mid], s[mid:]
 }
-func main() {
+func main_17() {
 
 	x, y := genericfunc[int]([]int{1, 2, 3, 4, 5, 6, 7})
 	fmt.Println(x)
