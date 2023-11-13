@@ -1,0 +1,14 @@
+The Unit test file should be in the same directory of the module i am testing
+The file name should be <>_test.go
+
+import "testing": th estandar golang module for testing
+
+Create a function func Test<Functionname>(t *testing.T): the function should start with Test and then the name of the function
+
+Go to project folder and run go test ./...: it will run all the unit tests of the project
+                                            -v: it will print the error messages
+
+
+To have more control in the test of the package implement 
+    func TestMain(m *testing.M) that has a m.Run() method that runs all the tests
+    Can execute some code before of after the m.Run()

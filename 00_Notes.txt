@@ -27,12 +27,19 @@ Module: a release of a collection of packages
 
         To import packages and modules use github remote url
 
-
+go mod init unique/package/name: initialize a golang project, this will create the go.mod file
+go get <githuburl>: download and install third-party dependencies
 go run: run the go code
 go build: build a production executable: build the package of the current directory
 go build && ./myprogram: rebuild and run the executable
 go install: compile and install the program locally
-go get <githuburl>: download and install third-party dependencies
+go env -w  GOPRIVATE=github.com/pepperstone-data/*: set a go env variable
+
+
+Variables:
+    GO111MODULE=on
+    GOPRIVATE=github.com/pepperstone-data/*
+
 
 Build libraries: export functions that can be used
                  pakcage name is not main
